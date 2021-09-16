@@ -1,6 +1,6 @@
 .form-sec {
     display: none;
-    &__active{
+    &--active{
         display: block;
         flex: 1;
     }
@@ -25,13 +25,14 @@
     }
 
     &__label{
+        font-weight: 600;
         margin-bottom: 5px;
     }
 
     &__input,&__textarea,&__select{
         border: none;
         outline: none;
-        background-color: white;
+        background-color: $form-input-bg-color;
         padding: 12px;
         border-radius: 10px;
         transition: 0.5s;

@@ -1,6 +1,6 @@
 .card-list{
     display: none;
-    &__active{
+    &--active{
         flex: 1;
         display: grid;
         grid-template-columns:repeat(auto-fill,minmax(225px,1fr));
@@ -18,5 +18,16 @@
     &__img{
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
+    }
+
+    &__title{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        height: 60px;
+        width: 100%;
+        margin-bottom: 10px;
     }
 }

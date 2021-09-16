@@ -1,0 +1,64 @@
+.form-sec {
+    display: none;
+    &__active{
+        display: block;
+        flex: 1;
+    }
+
+.form{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 20px;
+
+        @include mq(tablet,max){
+            grid-template-columns: 1fr;
+        }
+
+         &__group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom:20px;
+
+        &--full{
+            grid-column: 1/-1;
+        }
+    }
+
+    &__label{
+        margin-bottom: 5px;
+    }
+
+    &__input,&__textarea,&__select{
+        border: none;
+        outline: none;
+        background-color: white;
+        padding: 12px;
+        border-radius: 10px;
+        transition: 0.5s;
+
+        &:focus {
+            box-shadow: 0 0 6px rgb(0 0 0 / 40%);
+        }
+    }
+
+    &__textarea{
+        resize: none;
+        min-height: 150px;
+    }
+
+    &__button-group{
+        grid-column: 1/-1;
+    }
+
+    &__button{
+        float: right;
+        background-color: $button-bg-color;
+        border: none;
+        padding: 10px 15px;
+        color: $button-color;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+}
+}
